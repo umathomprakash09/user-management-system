@@ -14,6 +14,7 @@ async function hashPassword(password) {
    }
 
    exports.signup = async (req, res, next) => {
+     console.log("Inside signup----------------");
     try {
      const { email, password, role } = req.body
      const hashedPassword = await hashPassword(password);
